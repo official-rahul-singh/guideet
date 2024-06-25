@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guideet</title>
+    <!-- preload fonts -->
+    <link rel="preload" href="assets/fonts/dm-sans-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/dm-sans-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/dm-sans-v15-latin-800.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url('assets/fonts/dm-sans-v15-latin-regular.woff2') format('woff2');
+        }
+
+        /* dm-sans-600 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url('assets/fonts/dm-sans-v15-latin-600.woff2') format('woff2');
+        }
+
+        /* dm-sans-800 - latin */
+        @font-face {
+            font-display: swap;
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url('assets/fonts/dm-sans-v15-latin-800.woff2') format('woff2');
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <div class="home">
+        <header>
+            <div class="container">
+                <div class="row top-bar">
+                    <div class="col-md-8">
+                        <div class="top-bar-links flex">
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="social-icons">
+                            <ul class="flex">
+                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15"
+                                            viewBox="0 0 320 512">
+                                            <path
+                                                d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="15"
+                                            height="15">
+                                            <path
+                                                d="M11.402 1.406h2.068L8.953 6.568l5.315 7.026h-4.161l-3.26-4.26-3.727 4.26H1.049L5.88 8.072.785 1.406h4.266L7.995 5.3zm-.727 10.951h1.146L4.427 2.578h-1.23z">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15"
+                                            viewBox="0 0 448 512">
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1">
+                                            </path>
+                                        </svg></a></li>
+                                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15" width="15"
+                                            viewBox="0 0 448 512">
+                                            <path
+                                                d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3M447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+                                            </path>
+                                        </svg></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="container flex justify-between align-center">
+                    <div class="site-logo">
+                        <a href="#"><img src="https://techybrain.net/wp-content/uploads/2024/05/logo.svg" alt=""
+                                class="img-fluid"></a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li class="dropdown"><a href="#">Social Media</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">How to</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#"> Submenu</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Top 10</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JavaScript</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">PHP MySQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="#">Social Media</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">How to</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#"> Submenu</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Top 10</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">JavaScript</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">PHP MySQL</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Streaming</a></li>
+                            <li><a href="#">Tech</a></li>
+                            <li><a href="#">Smartphone</a></li>
+                        </ul>
+                        <div class="cancel-btn" onclick="toggleButtons()">
+                            <svg fill="#000" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path>
+                            </svg>
+                        </div>
+                    </nav>
+                    <div class="right-header">
+                        <div class="toggle-slide-btn" onclick="toggleButtons()">
+                            <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z">
+                                </path>
+                            </svg>
+                        </div>
+                        <form action="#" class="search-form">
+                            <input type="search" placeholder="What can we help you find today?" required="">
+                            <button type="submit" class="search-btn">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                  <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                               </svg>
+                            </button>
+                         </form>
+                         <div class="mob-search-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667ZM14 14l-2.9-2.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="main-title">
+                        <span class="sub-title">For Marketing and Creative Teams</span>
+                        <div class="big-title">
+                            We create digitals <span>products that matters</span>
+                        </div>
+                        <p class="mb-0">Contented continued any happiness instantly objection yet her allowance. Use
+                            correct day new brought tedious. Kept easy or sons my it done.</p>
+                        <div class="group flex">
+                            <a href="#" class="btn-fill">Try for free</a>
+                            <a href="#" class="btn-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner-img">
+                        <img src="https://mannatstudio.com/html/serenite/assets/images/home-default-banner-img.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+
+    <main>
+             <!-- slider-strip -->
+             <div class="container">
+                <div class="slider-strip">
+
+                            <div class="marque-img">
+                                <img decoding="async" src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client3.png"
+                                    alt="">
+                                <img decoding="async"
+                                    src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client4.png"
+                                    alt="">
+                                <img decoding="async" src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client5.png"
+                                    alt="">
+                                <img decoding="async" src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client1.png"
+                                    alt="">
+                                <img decoding="async" src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client2.png"
+                                    alt="">
+                                <img decoding="async" src="https://mannatstudio.com/html/serenite/assets/images/partner/img-client6.png"
+                                    alt="">
+                            </div>
+                    
+                </div>
+            </div>
+        <!-- slider-strip -->
+
+        <div class="container sec-space">
+            <div class="row align-center sub-space">
+                <div class="col-md-6">
+                    <div class="h1">The Best IT Services for your future company</div>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                        dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                </div>
+            </div>
+            <div class="row row-gap">
+                <div class="col-lg-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-style">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="24" height="32"
+                                fill="#fff">
+                                <path
+                                    d="M10.863.344a2.06 2.06 0 0 1 2.275 0l1.112.731c.375.244.813.362 1.256.338l1.331-.081c.825-.05 1.6.4 1.969 1.137l.6 1.194c.2.4.525.719.919.919l1.206.606a2.06 2.06 0 0 1 1.137 1.969l-.081 1.331c-.025.444.094.887.338 1.256l.738 1.113a2.06 2.06 0 0 1 0 2.275l-.738 1.118a2.1 2.1 0 0 0-.338 1.256l.081 1.331c.05.825-.4 1.6-1.137 1.969l-1.194.6c-.4.2-.719.525-.919.919l-.606 1.206a2.06 2.06 0 0 1-1.969 1.137l-1.331-.081a2.07 2.07 0 0 0-1.256.338l-1.113.738a2.06 2.06 0 0 1-2.275 0l-1.118-.738a2.1 2.1 0 0 0-1.256-.338l-1.331.081c-.825.05-1.6-.4-1.969-1.137l-.6-1.194c-.2-.4-.525-.719-.919-.919l-1.206-.605a2.06 2.06 0 0 1-1.137-1.969l.081-1.331a2.07 2.07 0 0 0-.338-1.256l-.731-1.12a2.06 2.06 0 0 1 0-2.275l.731-1.112c.244-.375.362-.813.338-1.256l-.081-1.331c-.05-.825.4-1.6 1.137-1.969l1.194-.6c.4-.206.725-.531.925-.931l.6-1.194a2.06 2.06 0 0 1 1.969-1.137l1.331.081c.444.025.887-.094 1.256-.338zM17 12a5 5 0 1 0-10 0 5 5 0 1 0 10 0M.081 27.613l2.694-6.406a.05.05 0 0 1 .025.025l.6 1.194a4.08 4.08 0 0 0 3.875 2.237l1.331-.081c.013 0 .031 0 .044.013l1.113.738a4.2 4.2 0 0 0 1.006.481l-2.35 5.581c-.144.344-.463.575-.831.606s-.725-.138-.925-.45L4.65 28.47l-3.506.519c-.356.05-.713-.094-.938-.375s-.269-.669-.131-1zm15.5 3.775-2.35-5.575c.35-.113.688-.269 1.006-.481l1.113-.738c.013-.006.025-.013.044-.013l1.331.081a4.08 4.08 0 0 0 3.875-2.237l.6-1.194a.05.05 0 0 1 .025-.025l2.7 6.406c.138.331.087.713-.131 1s-.581.431-.938.375l-3.506-.519-2.013 3.075a.998.998 0 0 1-1.756-.156" />
+                            </svg>
+                        </div>
+                        <div class="icon-box-content">
+                            <div class="h4">Flexible Price</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-style">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="24" height="32"
+                                fill="#fff">
+                                <path
+                                    d="M10.863.344a2.06 2.06 0 0 1 2.275 0l1.112.731c.375.244.813.362 1.256.338l1.331-.081c.825-.05 1.6.4 1.969 1.137l.6 1.194c.2.4.525.719.919.919l1.206.606a2.06 2.06 0 0 1 1.137 1.969l-.081 1.331c-.025.444.094.887.338 1.256l.738 1.113a2.06 2.06 0 0 1 0 2.275l-.738 1.118a2.1 2.1 0 0 0-.338 1.256l.081 1.331c.05.825-.4 1.6-1.137 1.969l-1.194.6c-.4.2-.719.525-.919.919l-.606 1.206a2.06 2.06 0 0 1-1.969 1.137l-1.331-.081a2.07 2.07 0 0 0-1.256.338l-1.113.738a2.06 2.06 0 0 1-2.275 0l-1.118-.738a2.1 2.1 0 0 0-1.256-.338l-1.331.081c-.825.05-1.6-.4-1.969-1.137l-.6-1.194c-.2-.4-.525-.719-.919-.919l-1.206-.605a2.06 2.06 0 0 1-1.137-1.969l.081-1.331a2.07 2.07 0 0 0-.338-1.256l-.731-1.12a2.06 2.06 0 0 1 0-2.275l.731-1.112c.244-.375.362-.813.338-1.256l-.081-1.331c-.05-.825.4-1.6 1.137-1.969l1.194-.6c.4-.206.725-.531.925-.931l.6-1.194a2.06 2.06 0 0 1 1.969-1.137l1.331.081c.444.025.887-.094 1.256-.338zM17 12a5 5 0 1 0-10 0 5 5 0 1 0 10 0M.081 27.613l2.694-6.406a.05.05 0 0 1 .025.025l.6 1.194a4.08 4.08 0 0 0 3.875 2.237l1.331-.081c.013 0 .031 0 .044.013l1.113.738a4.2 4.2 0 0 0 1.006.481l-2.35 5.581c-.144.344-.463.575-.831.606s-.725-.138-.925-.45L4.65 28.47l-3.506.519c-.356.05-.713-.094-.938-.375s-.269-.669-.131-1zm15.5 3.775-2.35-5.575c.35-.113.688-.269 1.006-.481l1.113-.738c.013-.006.025-.013.044-.013l1.331.081a4.08 4.08 0 0 0 3.875-2.237l.6-1.194a.05.05 0 0 1 .025-.025l2.7 6.406c.138.331.087.713-.131 1s-.581.431-.938.375l-3.506-.519-2.013 3.075a.998.998 0 0 1-1.756-.156" />
+                            </svg>
+                        </div>
+                        <div class="icon-box-content">
+                            <div class="h4">Flexible Price</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-style">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="24" height="32"
+                                fill="#fff">
+                                <path
+                                    d="M10.863.344a2.06 2.06 0 0 1 2.275 0l1.112.731c.375.244.813.362 1.256.338l1.331-.081c.825-.05 1.6.4 1.969 1.137l.6 1.194c.2.4.525.719.919.919l1.206.606a2.06 2.06 0 0 1 1.137 1.969l-.081 1.331c-.025.444.094.887.338 1.256l.738 1.113a2.06 2.06 0 0 1 0 2.275l-.738 1.118a2.1 2.1 0 0 0-.338 1.256l.081 1.331c.05.825-.4 1.6-1.137 1.969l-1.194.6c-.4.2-.719.525-.919.919l-.606 1.206a2.06 2.06 0 0 1-1.969 1.137l-1.331-.081a2.07 2.07 0 0 0-1.256.338l-1.113.738a2.06 2.06 0 0 1-2.275 0l-1.118-.738a2.1 2.1 0 0 0-1.256-.338l-1.331.081c-.825.05-1.6-.4-1.969-1.137l-.6-1.194c-.2-.4-.525-.719-.919-.919l-1.206-.605a2.06 2.06 0 0 1-1.137-1.969l.081-1.331a2.07 2.07 0 0 0-.338-1.256l-.731-1.12a2.06 2.06 0 0 1 0-2.275l.731-1.112c.244-.375.362-.813.338-1.256l-.081-1.331c-.05-.825.4-1.6 1.137-1.969l1.194-.6c.4-.206.725-.531.925-.931l.6-1.194a2.06 2.06 0 0 1 1.969-1.137l1.331.081c.444.025.887-.094 1.256-.338zM17 12a5 5 0 1 0-10 0 5 5 0 1 0 10 0M.081 27.613l2.694-6.406a.05.05 0 0 1 .025.025l.6 1.194a4.08 4.08 0 0 0 3.875 2.237l1.331-.081c.013 0 .031 0 .044.013l1.113.738a4.2 4.2 0 0 0 1.006.481l-2.35 5.581c-.144.344-.463.575-.831.606s-.725-.138-.925-.45L4.65 28.47l-3.506.519c-.356.05-.713-.094-.938-.375s-.269-.669-.131-1zm15.5 3.775-2.35-5.575c.35-.113.688-.269 1.006-.481l1.113-.738c.013-.006.025-.013.044-.013l1.331.081a4.08 4.08 0 0 0 3.875-2.237l.6-1.194a.05.05 0 0 1 .025-.025l2.7 6.406c.138.331.087.713-.131 1s-.581.431-.938.375l-3.506-.519-2.013 3.075a.998.998 0 0 1-1.756-.156" />
+                            </svg>
+                        </div>
+                        <div class="icon-box-content">
+                            <div class="h4">Flexible Price</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="icon-box">
+                        <div class="icon-style">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="24" height="32"
+                                fill="#fff">
+                                <path
+                                    d="M10.863.344a2.06 2.06 0 0 1 2.275 0l1.112.731c.375.244.813.362 1.256.338l1.331-.081c.825-.05 1.6.4 1.969 1.137l.6 1.194c.2.4.525.719.919.919l1.206.606a2.06 2.06 0 0 1 1.137 1.969l-.081 1.331c-.025.444.094.887.338 1.256l.738 1.113a2.06 2.06 0 0 1 0 2.275l-.738 1.118a2.1 2.1 0 0 0-.338 1.256l.081 1.331c.05.825-.4 1.6-1.137 1.969l-1.194.6c-.4.2-.719.525-.919.919l-.606 1.206a2.06 2.06 0 0 1-1.969 1.137l-1.331-.081a2.07 2.07 0 0 0-1.256.338l-1.113.738a2.06 2.06 0 0 1-2.275 0l-1.118-.738a2.1 2.1 0 0 0-1.256-.338l-1.331.081c-.825.05-1.6-.4-1.969-1.137l-.6-1.194c-.2-.4-.525-.719-.919-.919l-1.206-.605a2.06 2.06 0 0 1-1.137-1.969l.081-1.331a2.07 2.07 0 0 0-.338-1.256l-.731-1.12a2.06 2.06 0 0 1 0-2.275l.731-1.112c.244-.375.362-.813.338-1.256l-.081-1.331c-.05-.825.4-1.6 1.137-1.969l1.194-.6c.4-.206.725-.531.925-.931l.6-1.194a2.06 2.06 0 0 1 1.969-1.137l1.331.081c.444.025.887-.094 1.256-.338zM17 12a5 5 0 1 0-10 0 5 5 0 1 0 10 0M.081 27.613l2.694-6.406a.05.05 0 0 1 .025.025l.6 1.194a4.08 4.08 0 0 0 3.875 2.237l1.331-.081c.013 0 .031 0 .044.013l1.113.738a4.2 4.2 0 0 0 1.006.481l-2.35 5.581c-.144.344-.463.575-.831.606s-.725-.138-.925-.45L4.65 28.47l-3.506.519c-.356.05-.713-.094-.938-.375s-.269-.669-.131-1zm15.5 3.775-2.35-5.575c.35-.113.688-.269 1.006-.481l1.113-.738c.013-.006.025-.013.044-.013l1.331.081a4.08 4.08 0 0 0 3.875-2.237l.6-1.194a.05.05 0 0 1 .025-.025l2.7 6.406c.138.331.087.713-.131 1s-.581.431-.938.375l-3.506-.519-2.013 3.075a.998.998 0 0 1-1.756-.156" />
+                            </svg>
+                        </div>
+                        <div class="icon-box-content">
+                            <div class="h4">Flexible Price</div>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- why to choose us =====Start=== -->
+        <div class="why-to-choose sec-space">
+            <div class="container">
+                <div class="row row-gap sub-space">
+                    <div class="col-lg-5">
+                        <div class="h1 mb-10">Why Chose Us?</div>
+                        <p>This letter expresses our sincere gratitude for the excellent work that your company has
+                            done. I would like to note the high professionalism of the entire team, the ability to work
+                            with the customer.</p>
+                        <ul class="style-list">
+                            <li>Machine learning enabled projections</li>
+                            <li>Visitor mouse and click tracking</li>
+                            <li>Automated revenue suggestions</li>
+                            <li>Machine learning enabled projections</li>
+                        </ul>
+                        <a href="#" class="btn-dark">Learn More</a>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="h1 sub-space">Turn Your Amazing Ideas Into Reality</div>
+                        <img src="https://mannatstudio.com/html/serenite/assets/images/video_bg_off.png"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- why to choose us =====End=== -->
+
+        <!-- Blog Section ====Start -->
+        <div class="container sec-space blogs">
+            <div class="text-center sub-space">
+                <div class="h1 mb-10">Our Blogs & Articles</div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+            </div>
+            <div class="row row-gap">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card">
+                        <div class="img-placeholder">
+                            <a href="#"><img
+                                    src="https://getassist.net/wp-content/uploads/2024/05/instagram-collab-post.webp"
+                                    alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="catg">Tech</a>
+                            <a href="#" class="title-h">Major Insurance Provider Saves $750k per Month With Big Data
+                                Migration</a>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card">
+                        <div class="img-placeholder">
+                            <a href="#"><img
+                                    src="https://getassist.net/wp-content/uploads/2024/05/instagram-collab-post.webp"
+                                    alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="catg">Tech</a>
+                            <a href="#" class="title-h">Major Insurance Provider Saves $750k per Month With Big Data
+                                Migration</a>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-card">
+                        <div class="img-placeholder">
+                            <a href="#"><img
+                                    src="https://getassist.net/wp-content/uploads/2024/05/instagram-collab-post.webp"
+                                    alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="card-content">
+                            <a href="#" class="catg">Tech</a>
+                            <a href="#" class="title-h">Major Insurance Provider Saves $750k per Month With Big Data
+                                Migration</a>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-center">
+                <a href="#" class="btn-dark">Learn More</a>
+            </div>
+        </div>
+        <!-- Blog Section ====End -->
+
+        <!-- FAQ Start -->
+        <div class="light-bg sec-space">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="h1 mb-10">Frequently Asked Question</div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="accordions">
+                            <details open="">
+                                <summary> Alright, but what <a href="#">Doodle Games?</a> exactly do you do ? </summary>
+                                <div class="content">
+                                    <p><strong>Ans:</strong> The basic plan allows one account, the standard plan allows
+                                        two, and the premium plan allows up to 4 accounts.</p>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>
+                                    Alright, but what exactly do you do ?
+                                </summary>
+                                <div class="content">
+                                    <p><strong>Ans:</strong> The basic plan allows one account, the standard plan allows
+                                        two, and the premium plan allows up to 4 accounts.</p>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>
+                                    Alright, but what exactly do you do ?
+                                </summary>
+                                <div class="content">
+                                    <p><strong>Ans:</strong> The basic plan allows one account, the standard plan allows
+                                        two, and the premium plan allows up to 4 accounts.</p>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>
+                                    Alright, but what exactly do you do ?
+                                </summary>
+                                <div class="content">
+                                    <p><strong>Ans:</strong> The basic plan allows one account, the standard plan allows
+                                        two, and the premium plan allows up to 4 accounts.</p>
+                                </div>
+                            </details>
+                            <details>
+                                <summary>
+                                    Alright, but what exactly do you do ?
+                                </summary>
+                                <div class="content">
+                                    <p><strong>Ans:</strong> The basic plan allows one account, the standard plan allows
+                                        two, and the premium plan allows up to 4 accounts.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ End -->
+
+        <!-- footer Start -->
+        <footer>
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="row row-gap align-center">
+                        <div class="col-lg-3">
+                            <div class="site-logo">
+                                <a href="#"><img src="https://techybrain.net/wp-content/uploads/2024/05/logo.svg" alt=""
+                                        class="img-fluid"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="subscribe-form">
+                                <div>Subscribe Our Newsletter</div>
+                                <form action="">
+                                    <input type="email" name="" placeholder="Enter Email Address" id="" required>
+                                    <button type="subscribe" class="btn-fill">
+                                        Subscribe
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-details">
+                        <div class="row row-gap">
+                            <div class="col-lg-4">
+                                <div class="footer-widget">
+                                    <div class="footer-title">About Us</div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna lectus, mattis
+                                        non accumsan in, tempor dictum neque.</p>
+                                    <p class="e-mail">Email at: &nbsp;<a
+                                            href="mailto:infoVpneer.com">infoguideet@gmail.com</a></p>
+                                    <div class="social-icons">
+                                        <ul class="flex">
+                                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15"
+                                                        width="15" viewBox="0 0 320 512">
+                                                        <path
+                                                            d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z">
+                                                        </path>
+                                                    </svg></a></li>
+                                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"
+                                                        width="15" height="15">
+                                                        <path
+                                                            d="M11.402 1.406h2.068L8.953 6.568l5.315 7.026h-4.161l-3.26-4.26-3.727 4.26H1.049L5.88 8.072.785 1.406h4.266L7.995 5.3zm-.727 10.951h1.146L4.427 2.578h-1.23z">
+                                                        </path>
+                                                    </svg></a></li>
+                                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15"
+                                                        width="15" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1">
+                                                        </path>
+                                                    </svg></a></li>
+                                            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="15"
+                                                        width="15" viewBox="0 0 448 512">
+                                                        <path
+                                                            d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3M447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z">
+                                                        </path>
+                                                    </svg></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="footer-widget">
+                                    <div class="footer-title">Company</div>
+                                    <ul class="widegt-list">
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Authors</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="footer-widget">
+                                    <div class="footer-title">Polpular Category</div>
+                                    <ul class="widegt-list">
+                                        <li><a href="#">Esports</a></li>
+                                        <li><a href="#">Tech Trends</a></li>
+                                        <li><a href="#">Cyber Security</a></li>
+                                        <li><a href="#">Windows</a></li>
+                                        <li><a href="#">Browsing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">©Copyright 2024 Guideet. All Rights Reserved.</div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
