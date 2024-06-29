@@ -103,8 +103,8 @@ h5,
 /* hero header */
 .hero-header {
   align-items: center;
-  padding: clamp(7.625rem, 7.625rem + 0vw, 7.625rem) 0 clamp(6.25rem, 6.25rem + 0vw, 6.25rem) 0;
-
+  padding-top: 90px;
+  padding-bottom: 70px;
 }
 
 header{
@@ -817,7 +817,10 @@ header nav ul li {
   .faq-img{
     display: none;
   }
- 
+  .hero-header {
+    padding-top: 122px;
+    padding-bottom: 100px;
+  }
 }
 @media screen and (max-width: 600px) {
   .subscribe-form,.blogs .sub-space p{
@@ -851,3 +854,22 @@ header nav ul li {
 
 
 
+/* why to choose second start */
+.quality-points, .quality-points li {
+  display: grid;
+  gap: 10px 20px;
+}
+.quality-points li {
+  grid-template-columns: auto auto;
+}
+.points-icon {
+  display: grid;
+  height: 50px;
+  place-content: center;
+  width: 50px;
+}
+.points-icon {
+  background: #41938f1a;
+  border-radius: 50%;
+}
+/* why to choose second end */
