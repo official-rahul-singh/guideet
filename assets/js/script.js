@@ -18,43 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// header scroll
-let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    document.querySelector('header').style.top = '-76px'; // Hide header
-    // document.querySelector('header nav').style.padding = '16px'; // Hide header
-    
-  } else {
-    // Scrolling up
-    document.querySelector('header').style.top = '0'; // Show header
-  }
-
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-
-let isPast200px = false;
-window.addEventListener('scroll', function() {
-	let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-	if (currentScroll > 50) {
-		if (!isPast200px) {
-			// Scrolled beyond 200px
-			document.querySelector('header').style.backgroundColor = 'var(--primary-color)'; // Change to the desired color
-			isPast200px = true;
-		}
-	} else {
-		// Scrolled within the first 200px
-		if (isPast200px) {
-			document.querySelector('header').style.backgroundColor = 'transparent'; // Change to the desired color
-			isPast200px = false;
-
-		}
-	}
-});
-
 // menu start
 let headerUl = document.querySelector('header nav');
 
@@ -280,3 +243,92 @@ if (!dropdown.contains(e.target)) {
         indicator.classList.add("active");
         activeIndicator = indicator;
     }
+
+
+
+
+
+// header scroll
+
+
+// let lastScrollTop = 0;
+// window.addEventListener('scroll', function() {
+//   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+//   if (currentScroll > lastScrollTop) {
+//     // Scrolling down
+//     document.querySelector('header').style.top = '-44px'; // Hide header
+    
+//   } else {
+//     // Scrolling up
+//     document.querySelector('header').style.top = '0px'; // Show header
+//   }
+
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// });
+
+// let isPast200px = false;
+// window.addEventListener('scroll', function() {
+// 	let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+// 	if (currentScroll > 50) {
+// 		if (!isPast200px) {
+// 			// Scrolled beyond 200px
+// 			document.querySelector('header').style.backgroundColor = '#fff'; // Change to the desired color
+//             document.querySelector('header').style.boxShadow = "0px 0px 7px 0px rgba(0, 0, 0, 0.15)";
+// 			isPast200px = true;
+// 		}
+// 	} else {
+// 		// Scrolled within the first 200px
+// 		if (isPast200px) {
+// 			document.querySelector('header').style.backgroundColor = 'transparent'; // Change to the desired color
+// 			isPast200px = false;
+//             document.querySelector('header').style.boxShadow = "unset";
+
+// 		}
+// 	}
+// });
+
+
+
+
+
+// my code
+// Initialize variables
+let lastScrollTop = 0;
+let isPast200px = false;
+
+// Function to handle scroll event
+function handleScroll() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    let header = document.querySelector('header');
+
+    // Toggle header visibility based on scroll direction
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        header.classList.add('header-hidden');
+    } else {
+        // Scrolling up
+        header.classList.remove('header-hidden');
+    }
+
+    // Toggle header background and shadow past 50px
+    if (currentScroll > 50) {
+        if (!isPast200px) {
+            // Scrolled beyond 50px
+            header.classList.add('header-scrolled');
+            isPast200px = true;
+        }
+    } else {
+        if (isPast200px) {
+            // Scrolled within the first 50px
+            header.classList.remove('header-scrolled');
+            isPast200px = false;
+        }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
+// my code
