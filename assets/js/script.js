@@ -121,12 +121,11 @@ if (!dropdown.contains(e.target)) {
         // testimonial slider
     const wrapper = document.querySelector(".slide-wrapper");
     const carousel = document.querySelector(".carousel");
-    const indicatorsContainer = document.querySelector(".indicators");
     const firstCardWidth = carousel.querySelector(".slide-card").offsetWidth;
     const arrowBtns = document.querySelectorAll(".slide-wrapper i");
     const carouselChildrens = [...carousel.children];
 
-    let isDragging = false, isAutoPlay = true, cardGap = 16, startX, startScrollLeft, timeoutId, activeIndicator;
+    let isDragging = false, isAutoPlay = true, cardGap = 16, startX, startScrollLeft, timeoutId;
 
     // Get the number of cards that can fit in the carousel at once
     let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
@@ -198,53 +197,13 @@ if (!dropdown.contains(e.target)) {
         timeoutId = setTimeout(() => carousel.scrollLeft += (firstCardWidth + cardGap), 1000);
     }
     autoPlay();
-    const updateActiveIndicator = () => {
-        const scrollLeft = carousel.scrollLeft;
-        const index = Math.round(scrollLeft / (firstCardWidth + cardGap)) - cardPerView;
-        const indicators = document.querySelectorAll(".indicator");
-        indicators.forEach((indicator, i) => {
-            if (i === index) {
-                setActiveIndicator(indicator);
-            }
-        });
-    }
-
 
     carousel.addEventListener("mousedown", dragStart);
     carousel.addEventListener("mousemove", dragging);
     document.addEventListener("mouseup", dragStop);
     carousel.addEventListener("scroll", infiniteScroll);
-    carousel.addEventListener("scroll", updateActiveIndicator);
     wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
     wrapper.addEventListener("mouseleave", autoPlay);
-
-
-    // Create indicators
-    for (let i = 0; i < carouselChildrens.length - 2 * cardPerView; i++) {
-        const indicator = document.createElement("div");
-        indicator.classList.add("indicator");
-        if (i === 0) {
-            indicator.classList.add("active");
-            activeIndicator = indicator;
-        }
-        indicator.addEventListener("click", () => {
-            carousel.scrollLeft = (i + cardPerView) * (firstCardWidth + cardGap);
-            setActiveIndicator(indicator);
-        });
-        indicatorsContainer.appendChild(indicator);
-    }
-
-
-    // Function to set active indicator
-    const setActiveIndicator = (indicator) => {
-        if (activeIndicator) {
-            activeIndicator.classList.remove("active");
-        }
-        indicator.classList.add("active");
-        activeIndicator = indicator;
-    }
-
-
 
 
 
